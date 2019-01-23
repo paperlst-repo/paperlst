@@ -1,0 +1,6 @@
+﻿{
+  "DataProvider": "sqlserver",
+  //"DataConnectionString": "Data Source=68.66.228.7;Initial Catalog=sebast16_Proj1;User ID=sebast16_Proj1;Password=y8p94t%L",
+  "DataConnectionString": "Data Source=DESKTOP-OQCMGD6\\SQLEXPRESS;Initial Catalog=Project1;Integrated Security=False;Persist Security Info=False;User ID=Project1;Password=Pass1234",
+  "RawDataSettings": {}
+}

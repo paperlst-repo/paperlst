@@ -1,0 +1,108 @@
+﻿@{
+    Layout = "_ConfigurePlugin";
+    Html.AddScriptParts("~/Plugins/Widgets.ThemeGrandNode/Content/js/farbtastic.theme.js");
+    Html.AddCssFileParts("~/lib/farbtastic/farbtastic.css");
+    Html.AddCssFileParts("~/Plugins/Widgets.ThemeGrandNode/Content/css/configureWidget.css");
+
+}
+@model Nop4you.Plugin.Widgets.ThemeGrandNode.Models.ConfigurationModel
+@using Nop.Web.Framework.UI;
+<form asp-controller="ThemeGrandNode" asp-action="Configure" method="post">
+    <div class="content-header clearfix">
+        <div class="pull-right">
+            <button type="submit" name="save" class="btn bg-blue">
+                <i class="fa fa-floppy-o"></i>
+                @T("Admin.Common.Save")
+            </button>
+        </div>
+    </div>
+
+    <div class="plugin-intro-table">
+        <div class="form-group">
+            @*<div class="col-md-12">
+                    <div class="alert alert-info">
+                        <strong>If you found any bug or have any development proposal, please visit <a href="http://nop4you.com/grandnode-theme-nopcommerce" target="_blank">product page</a> and create ticket to send us information.</strong>
+                    </div>
+                </div>*@
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-10">
+                <div class="panel-group">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            You may use this theme free of charge, as long as you will keep footer information.
+                        </div>
+
+                        <div id="tabStrip" class="nav-tabs-custom">
+                            <nop-tabs id="ageconfirm-edit">
+                                <nop-tab asp-name="tab-colors" asp-title="@T("Nop4you.Theme.GrandNode.configurationTabColors")" asp-default="true">@await Html.PartialAsync("TabColors.cshtml", Model)</nop-tab>
+                                <nop-tab asp-name="tab-settings" asp-title="@T("Nop4you.Theme.GrandNode.configurationTabSettings")">@await Html.PartialAsync("TabSettings.cshtml", Model)</nop-tab>
+                                <nop-tab asp-name="tab-storeclosed" asp-title="@T("Nop4you.Theme.GrandNode.configurationTabStoreClosed")">@await Html.PartialAsync("TabStoreClosed.cshtml", Model)</nop-tab>
+                                <nop-tab asp-name="tab-customorders" asp-title="@T("Nop4you.Theme.GrandNode.configurationCustomOrders")">@await Html.PartialAsync("TabCustomOrders.cshtml", Model)</nop-tab>
+                            </nop-tabs>
+                        </div>
+
+                        <div class="panel-footer">
+                            Build: @Model.version
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="panel-group">
+                    <div class="panel">
+                        <div class="panel-heading">
+                            <img src="~/Plugins/Widgets.ThemeGrandNode/Content/images/logo.png" style="width: 100px;" />
+                        </div>
+                        <div class="panel-body">
+                            <div class="list-group">
+                                <a href="https://www.nopcommerce.com/p/2123/grandnode-theme-nop4youcom.aspx" target="_blank" class="list-group-item"><i class="fa fa-star" aria-hidden="true"></i> Please rate</a>
+                                <a href="https://www.nop4you.com/contactus" target="_blank" class="list-group-item"><i class="fa fa-bug" aria-hidden="true"></i> Report bug</a>
+                                <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=support@nop4you.com&item_name=Donation+for+developer&item_number=GrandNodeTheme" target="_blank" class="list-group-item"><i class="fa fa-money" aria-hidden="true"></i> Tip jar</a>
+                                <a href="https://www.nop4you.com" target="_blank" class="list-group-item list-group-item-success"><i class="fa fa-plug" aria-hidden="true"></i> More plugins</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</form>
+<style>
+    .customValuesOn, .backtotopiconeditor {
+        display: none;
+    }
+
+    .adminCustomValuesToggleSet {
+        display: block;
+    }
+
+    .hideIfOwnOn {
+        display: none;
+    }
+</style>
+<script>
+    $(document).ready(function () {
+
+        bindBootstrapTabSelectEvent('tabStrip');
+
+        $("#setCustomValues").change(function () {
+            $(".customValuesOn").toggleClass("adminCustomValuesToggleSet", this.checked)
+        }).change();
+
+        $("#setCustomValues").change(function () {
+            $(".styleSwitcher").toggleClass("hideIfOwnOn", this.checked)
+        }).change();
+
+        $('#showBackToTop').change(function () {
+            $(".backtotopiconeditor").toggleClass("adminCustomValuesToggleSet", this.checked)
+        }).change();
+    });
+</script>
+

@@ -1,0 +1,116 @@
+﻿@model Nop4you.Plugin.Widgets.ThemeGrandNode.Models.ConfigurationModel
+@{
+    var setBackgroundVar = (!String.IsNullOrEmpty(Model.setCustomBackground) ? Model.setCustomBackground : "#654321");
+    var setTextColorVar = (!String.IsNullOrEmpty(Model.setCustomTextColor) ? Model.setCustomTextColor : "#654321");
+    var setDarkColorVar = (!String.IsNullOrEmpty(Model.setCustomDarkColor) ? Model.setCustomDarkColor : "#654321");
+}
+
+
+<div class="form-group">
+    <div class="col-md-3">
+        <nop-label asp-for="Color" />
+    </div>
+    <div class="col-md-9">
+        <nop-select asp-for="Color" asp-items="Model.Colors"/>
+        <span asp-validation-for="Color"></span>
+    </div>
+</div>
+<div class="form-group setCustmValues">
+    <div class="col-md-3">
+        <nop-label asp-for="setCustomValues" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="setCustomValues" />
+        <span asp-validation-for="setCustomValues"></span>
+    </div>
+</div>
+<div class="form-group customValuesOn">
+    <div class="col-md-3">
+        <nop-label asp-for="setCustomBackground" />
+    </div>
+    <div class="col-md-3">
+        <input class="text-box single-line valid colorwell" id="setCustomBackground" name="setCustomBackground" type="text" value="@setBackgroundVar">
+    </div>
+</div>
+<div class="form-group customValuesOn">
+    <div class="col-md-3">
+        <nop-label asp-for="setCustomTextColor" />
+    </div>
+    <div class="col-md-3">
+        <input class="text-box single-line valid colorwell" id="setCustomTextColor" name="setCustomTextColor" type="text" value="@setTextColorVar">
+    </div>
+</div>
+<div class="form-group customValuesOn">
+    <div class="col-md-3">
+        <nop-label asp-for="setCustomDarkColor" />
+    </div>
+    <div class="col-md-3">
+        <input class="text-box single-line valid colorwell" id="setCustomDarkColor" name="setCustomDarkColor" type="text" value="@setDarkColorVar">
+    </div>
+    <div class="col-md-6">
+        <div id="picker"></div>
+    </div>
+</div>
+<div class="form-group styleSwitcher">
+    <div class="col-md-3">
+        <nop-label asp-for="showSwitchStyle" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="showSwitchStyle" />
+        <span asp-validation-for="showSwitchStyle"></span>
+    </div>
+</div>
+<div class="form-group styleSwitcher">
+    <div class="col-md-3">
+        <nop-label asp-for="showWidgetZone" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="showWidgetZone" />
+        <span asp-validation-for="showWidgetZone"></span>
+    </div>
+</div>
+<div class="form-group">
+    <div class="col-md-3">
+        <nop-label asp-for="setMenuBarColor" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="setMenuBarColor" />
+        <span asp-validation-for="setMenuBarColor"></span>
+    </div>
+</div>
+<div class="form-group backtotopsetting">
+    <div class="col-md-3">
+        <nop-label asp-for="showBackToTop" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="showBackToTop" />
+        <span asp-validation-for="showBackToTop"></span>
+    </div>
+</div>
+<div class="form-group backtotopiconeditor">
+    <div class="col-md-3">
+        <nop-label asp-for="setBackToTopIcon" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="setBackToTopIcon" />
+        <span asp-validation-for="setBackToTopIcon"></span>
+    </div>
+</div>
+<div class="form-group backtotopiconeditor">
+    <div class="col-md-3">
+        <nop-label asp-for="showBackToTopFaIcon" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="showBackToTopFaIcon" />
+        <span asp-validation-for="showBackToTopFaIcon"></span>
+    </div>
+</div>
+<div class="form-group backtotopiconeditor">
+    <div class="col-md-3">
+        <nop-label asp-for="setBackToTopFaIcon" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="setBackToTopFaIcon" />
+        <span asp-validation-for="setBackToTopFaIcon"></span>
+    </div>
+</div>

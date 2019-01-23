@@ -1,0 +1,15 @@
+﻿{
+  "Group": "nop4you",
+  "FriendlyName": "Theme GrandNode",
+  "SystemName": "Theme.GrandNode",
+  "Version": "1.10.1",
+  "SupportedVersions": [
+    "4.10"
+  ],
+  "Author": "nop4you.com",
+  "DisplayOrder": 1,
+  "FileName": "Nop4you.Plugin.Widgets.ThemeGrandNode.dll",
+  "Description": "This plugin help you with installation of your new theme",
+  "LimitedToStores": [],
+  "LimitedToCustomerRoles": []
+}

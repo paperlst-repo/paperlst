@@ -1,0 +1,25 @@
+﻿@model Nop4you.Plugin.Widgets.ThemeGrandNode.Models.ConfigurationModel
+
+<div class="form-group">
+    <div class="col-md-3">
+        <nop-label asp-for="useStoreClosed" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="useStoreClosed" />
+        <span asp-validation-for="useStoreClosed"></span>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-3">
+        <nop-label asp-for="storeClosedTemplate" />
+    </div>
+    <div class="col-md-9 template">
+        <div class="row">
+            <div class="col-md-2"><label><img src="~/Plugins/Widgets.ThemeGrandNode/Content/images/pure.png" /> @Html.RadioButtonFor(model => model.storeClosedTemplate, "pure")</label></div>
+            <div class="col-md-2"><label><img src="~/Plugins/Widgets.ThemeGrandNode/Content/images/wallbrick.png" />@Html.RadioButtonFor(model => model.storeClosedTemplate, "wallbrick")</label></div>
+            <div class="col-md-2"><label><img src="~/Plugins/Widgets.ThemeGrandNode/Content/images/airport.png" />@Html.RadioButtonFor(model => model.storeClosedTemplate, "airport")</label></div>
+        </div>
+    </div>
+</div>
+    

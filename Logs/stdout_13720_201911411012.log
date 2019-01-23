@@ -1,0 +1,1430 @@
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (112ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [t].[Id], [t].[Enabled], [t].[LastEndUtc], [t].[LastStartUtc], [t].[LastSuccessUtc], [t].[Name], [t].[Seconds], [t].[StopOnError], [t].[Type]
+      FROM [ScheduleTask] AS [t]
+      WHERE [t].[Enabled] = 1
+      ORDER BY [t].[Seconds] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (13ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[CompanyAddress], [s].[CompanyName], [s].[CompanyPhoneNumber], [s].[CompanyVat], [s].[DefaultLanguageId], [s].[DisplayOrder], [s].[Hosts], [s].[Name], [s].[SslEnabled], [s].[Url]
+      FROM [Store] AS [s]
+      ORDER BY [s].[DisplayOrder], [s].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (95ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [s].[Id], [s].[Name], [s].[StoreId], [s].[Value]
+      FROM [Setting] AS [s]
+      ORDER BY [s].[Name], [s].[StoreId]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (155ms) [Parameters=[@p0='?' (DbType = DateTime2), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (Size = 200), @p4='?' (DbType = Int32), @p5='?' (Size = 4000), @p6='?' (Size = 4000), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Log] ([CreatedOnUtc], [CustomerId], [FullMessage], [IpAddress], [LogLevelId], [PageUrl], [ReferrerUrl], [ShortMessage])
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+      SELECT [Id]
+      FROM [Log]
+      WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+Hosting environment: Production
+Content root path: C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_NoSource
+Now listening on: http://127.0.0.1:7380
+Application started. Press Ctrl+C to shut down.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://localhost:55596/  
+warn: Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware[1]
+      AcceptLanguageHeaderRequestCultureProvider returned the following unsupported cultures 'es, en-AU, en'.
+warn: Microsoft.AspNetCore.Localization.RequestLocalizationMiddleware[2]
+      AcceptLanguageHeaderRequestCultureProvider returned the following unsupported UI Cultures 'es, en-AU, en'.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 70
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__email_0='?' (Size = 1000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[Email] = @__email_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (32ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [l].[Id], [l].[DefaultCurrencyId], [l].[DisplayOrder], [l].[FlagImageFileName], [l].[LanguageCulture], [l].[LimitedToStores], [l].[Name], [l].[Published], [l].[Rtl], [l].[UniqueSeoCode]
+      FROM [Language] AS [l]
+      WHERE [l].[Published] = 1
+      ORDER BY [l].[DisplayOrder], [l].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (38ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Customer_Id], [e].[CustomerRole_Id]
+      FROM [Customer_CustomerRole_Mapping] AS [e]
+      WHERE [e].[Customer_Id] = @__get_Item_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[Active], [e].[DefaultTaxDisplayTypeId], [e].[EnablePasswordLifetime], [e].[FreeShipping], [e].[IsSystemRole], [e].[Name], [e].[OverrideTaxDisplayType], [e].[PurchasedWithProductId], [e].[SystemName], [e].[TaxExempt]
+      FROM [CustomerRole] AS [e]
+      WHERE [e].[Id] = @__get_Item_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[Active], [e].[DefaultTaxDisplayTypeId], [e].[EnablePasswordLifetime], [e].[FreeShipping], [e].[IsSystemRole], [e].[Name], [e].[OverrideTaxDisplayType], [e].[PurchasedWithProductId], [e].[SystemName], [e].[TaxExempt]
+      FROM [CustomerRole] AS [e]
+      WHERE [e].[Id] = @__get_Item_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[Active], [e].[DefaultTaxDisplayTypeId], [e].[EnablePasswordLifetime], [e].[FreeShipping], [e].[IsSystemRole], [e].[Name], [e].[OverrideTaxDisplayType], [e].[PurchasedWithProductId], [e].[SystemName], [e].[TaxExempt]
+      FROM [CustomerRole] AS [e]
+      WHERE [e].[Id] = @__get_Item_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "Index", controller = "Home", area = ""}. Executing action Nop.Web.Controllers.HomeController.Index (Nop.Web)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (116ms) [Parameters=[@__customerRoleId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [pr].[Id], [pr].[Category], [pr].[Name], [pr].[SystemName]
+      FROM [PermissionRecord] AS [pr]
+      INNER JOIN [PermissionRecord_Role_Mapping] AS [prcrm] ON [pr].[Id] = [prcrm].[PermissionRecord_Id]
+      WHERE [prcrm].[CustomerRole_Id] = @__customerRoleId_0
+      ORDER BY [pr].[Id]
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Directory.UpdateExchangeRateTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (45ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (24ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (59ms) [Parameters=[@p23='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Guid), @p7='?' (DbType = Boolean), @p8='?' (Size = 1000), @p9='?' (Size = 1000), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p18='?' (DbType = Boolean), @p19='?' (DbType = Int32), @p20='?' (Size = 400), @p21='?' (Size = 1000), @p22='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [Customer] SET [Active] = @p0, [AdminComment] = @p1, [AffiliateId] = @p2, [BillingAddress_Id] = @p3, [CannotLoginUntilDateUtc] = @p4, [CreatedOnUtc] = @p5, [CustomerGuid] = @p6, [Deleted] = @p7, [Email] = @p8, [EmailToRevalidate] = @p9, [FailedLoginAttempts] = @p10, [HasShoppingCartItems] = @p11, [IsSystemAccount] = @p12, [IsTaxExempt] = @p13, [LastActivityDateUtc] = @p14, [LastIpAddress] = @p15, [LastLoginDateUtc] = @p16, [RegisteredInStoreId] = @p17, [RequireReLogin] = @p18, [ShippingAddress_Id] = @p19, [SystemName] = @p20, [Username] = @p21, [VendorId] = @p22
+      WHERE [Id] = @p23;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 345.7553ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 1307.22ms
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (42ms) [Parameters=[@p5='?' (DbType = Int32), @p0='?' (DbType = Int32), @p1='?' (Size = 400), @p2='?' (Size = 400), @p3='?' (DbType = Int32), @p4='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [GenericAttribute] SET [EntityId] = @p0, [Key] = @p1, [KeyGroup] = @p2, [StoreId] = @p3, [Value] = @p4
+      WHERE [Id] = @p5;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.HomeController.Index (Nop.Web) - Validation state: Valid
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.HomeController.Index (Nop.Web), returned result Microsoft.AspNetCore.Mvc.ViewResult in 9.276ms.
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 5701.9289ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 64
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (54ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (40ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Customers.DeleteGuestsTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (37ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (51ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (386ms) [Parameters=[OnlyWithoutShoppingCart='?' (DbType = Boolean), CreatedFromUtc='?' (DbType = DateTime), CreatedToUtc='?' (DbType = DateTime), TotalRecordsDeleted='?' (Direction = Output) (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      EXEC [DeleteGuests] @OnlyWithoutShoppingCart, @CreatedFromUtc, @CreatedToUtc, @TotalRecordsDeleted OUTPUT
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (39ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 984.35ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 990.7406ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 1101.6674ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 58
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (34ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (76ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Common.KeepAliveTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (37ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (42ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (40ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (50ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 483.4125ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 484.017ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 494.395ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://localhost:55596/keepalive/index  
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (51ms) [Parameters=[@__systemName_0='?' (Size = 255)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [cr].[Id], [cr].[Active], [cr].[DefaultTaxDisplayTypeId], [cr].[EnablePasswordLifetime], [cr].[FreeShipping], [cr].[IsSystemRole], [cr].[Name], [cr].[OverrideTaxDisplayType], [cr].[PurchasedWithProductId], [cr].[SystemName], [cr].[TaxExempt]
+      FROM [CustomerRole] AS [cr]
+      WHERE [cr].[SystemName] = @__systemName_0
+      ORDER BY [cr].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (76ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Guid), @p7='?' (DbType = Boolean), @p8='?' (Size = 1000), @p9='?' (Size = 1000), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p18='?' (DbType = Boolean), @p19='?' (DbType = Int32), @p20='?' (Size = 400), @p21='?' (Size = 1000), @p22='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customer] ([Active], [AdminComment], [AffiliateId], [BillingAddress_Id], [CannotLoginUntilDateUtc], [CreatedOnUtc], [CustomerGuid], [Deleted], [Email], [EmailToRevalidate], [FailedLoginAttempts], [HasShoppingCartItems], [IsSystemAccount], [IsTaxExempt], [LastActivityDateUtc], [LastIpAddress], [LastLoginDateUtc], [RegisteredInStoreId], [RequireReLogin], [ShippingAddress_Id], [SystemName], [Username], [VendorId])
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+      SELECT [Id]
+      FROM [Customer]
+      WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (40ms) [Parameters=[@p23='?' (DbType = Int32), @p24='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customer_CustomerRole_Mapping] ([Customer_Id], [CustomerRole_Id])
+      VALUES (@p23, @p24);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (71ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "Index", controller = "KeepAlive", area = ""}. Executing action Nop.Web.Controllers.KeepAliveController.Index (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.KeepAliveController.Index (Nop.Web) - Validation state: Valid
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.KeepAliveController.Index (Nop.Web), returned result Microsoft.AspNetCore.Mvc.ContentResult in 1.694ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor[1]
+      Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.KeepAliveController.Index (Nop.Web) in 119.0598ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 712.9106ms 200 text/plain; charset=utf-8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (34ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 7061.1059ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 7062.1767ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 7334.2569ms 204 
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[1]
+      Executing ViewResult, running view Index.
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (33ms) [Parameters=[@__systemName_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT [t].[Id], [t].[AccessibleWhenStoreClosed], [t].[Body], [t].[DisplayOrder], [t].[IncludeInFooterColumn1], [t].[IncludeInFooterColumn2], [t].[IncludeInFooterColumn3], [t].[IncludeInSitemap], [t].[IncludeInTopMenu], [t].[IsPasswordProtected], [t].[LimitedToStores], [t].[MetaDescription], [t].[MetaKeywords], [t].[MetaTitle], [t].[Password], [t].[Published], [t].[SubjectToAcl], [t].[SystemName], [t].[Title], [t].[TopicTemplateId]
+      FROM [Topic] AS [t]
+      WHERE ([t].[SystemName] = @__systemName_0) AND ([t].[Published] = 1)
+      ORDER BY [t].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (86ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [p].[Id], [p].[AdditionalShippingCharge], [p].[AdminComment], [p].[AllowAddingOnlyExistingAttributeCombinations], [p].[AllowBackInStockSubscriptions], [p].[AllowCustomerReviews], [p].[AllowedQuantities], [p].[ApprovedRatingSum], [p].[ApprovedTotalReviews], [p].[AutomaticallyAddRequiredProducts], [p].[AvailableEndDateTimeUtc], [p].[AvailableForPreOrder], [p].[AvailableStartDateTimeUtc], [p].[BackorderModeId], [p].[BasepriceAmount], [p].[BasepriceBaseAmount], [p].[BasepriceBaseUnitId], [p].[BasepriceEnabled], [p].[BasepriceUnitId], [p].[CallForPrice], [p].[CreatedOnUtc], [p].[CustomerEntersPrice], [p].[Deleted], [p].[DeliveryDateId], [p].[DisableBuyButton], [p].[DisableWishlistButton], [p].[DisplayOrder], [p].[DisplayStockAvailability], [p].[DisplayStockQuantity], [p].[DownloadActivationTypeId], [p].[DownloadExpirationDays], [p].[DownloadId], [p].[FullDescription], [p].[GiftCardTypeId], [p].[Gtin], [p].[HasDiscountsApplied], [p].[HasSampleDownload], [p].[HasTierPrices], [p].[HasUserAgreement], [p].[Height], [p].[IsDownload], [p].[IsFreeShipping], [p].[IsGiftCard], [p].[IsRecurring], [p].[IsRental], [p].[IsShipEnabled], [p].[IsTaxExempt], [p].[IsTelecommunicationsOrBroadcastingOrElectronicServices], [p].[Length], [p].[LimitedToStores], [p].[LowStockActivityId], [p].[ManageInventoryMethodId], [p].[ManufacturerPartNumber], [p].[MarkAsNew], [p].[MarkAsNewEndDateTimeUtc], [p].[MarkAsNewStartDateTimeUtc], [p].[MaxNumberOfDownloads], [p].[MaximumCustomerEnteredPrice], [p].[MetaDescription], [p].[MetaKeywords], [p].[MetaTitle], [p].[MinStockQuantity], [p].[MinimumCustomerEnteredPrice], [p].[Name], [p].[NotApprovedRatingSum], [p].[NotApprovedTotalReviews], [p].[NotReturnable], [p].[NotifyAdminForQuantityBelow], [p].[OldPrice], [p].[OrderMaximumQuantity], [p].[OrderMinimumQuantity], [p].[OverriddenGiftCardAmount], [p].[ParentGroupedProductId], [p].[PreOrderAvailabilityStartDateTimeUtc], [p].[Price], [p].[ProductAvailabilityRangeId], [p].[ProductCost], [p].[ProductTemplateId], [p].[ProductTypeId], [p].[Published], [p].[RecurringCycleLength], [p].[RecurringCyclePeriodId], [p].[RecurringTotalCycles], [p].[RentalPriceLength], [p].[RentalPricePeriodId], [p].[RequireOtherProducts], [p].[RequiredProductIds], [p].[SampleDownloadId], [p].[ShipSeparately], [p].[ShortDescription], [p].[ShowOnHomePage], [p].[Sku], [p].[StockQuantity], [p].[SubjectToAcl], [p].[TaxCategoryId], [p].[UnlimitedDownloads], [p].[UpdatedOnUtc], [p].[UseMultipleWarehouses], [p].[UserAgreementText], [p].[VendorId], [p].[VisibleIndividually], [p].[WarehouseId], [p].[Weight], [p].[Width]
+      FROM [Product] AS [p]
+      WHERE (([p].[Published] = 1) AND ([p].[Deleted] = 0)) AND ([p].[ShowOnHomePage] = 1)
+      ORDER BY [p].[DisplayOrder], [p].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (43ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__entityName_1='?' (Size = 400), @__languageId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [ur].[Slug]
+      FROM [UrlRecord] AS [ur]
+      WHERE ((([ur].[EntityId] = @__entityId_0) AND ([ur].[EntityName] = @__entityName_1)) AND ([ur].[LanguageId] = @__languageId_2)) AND ([ur].[IsActive] = 1)
+      ORDER BY [ur].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (60ms) [Parameters=[@__customerRoleId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [pr].[Id], [pr].[Category], [pr].[Name], [pr].[SystemName]
+      FROM [PermissionRecord] AS [pr]
+      INNER JOIN [PermissionRecord_Role_Mapping] AS [prcrm] ON [pr].[Id] = [prcrm].[PermissionRecord_Id]
+      WHERE [prcrm].[CustomerRole_Id] = @__customerRoleId_0
+      ORDER BY [pr].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (22ms) [Parameters=[@__customerRoleId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [pr].[Id], [pr].[Category], [pr].[Name], [pr].[SystemName]
+      FROM [PermissionRecord] AS [pr]
+      INNER JOIN [PermissionRecord_Role_Mapping] AS [prcrm] ON [pr].[Id] = [prcrm].[PermissionRecord_Id]
+      WHERE [prcrm].[CustomerRole_Id] = @__customerRoleId_0
+      ORDER BY [pr].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (60ms) [Parameters=[@__p_1='?' (DbType = Int32), @__productId_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(@__p_1) [p].[Id], [p].[AltAttribute], [p].[IsNew], [p].[MimeType], [p].[SeoFilename], [p].[TitleAttribute]
+      FROM [Picture] AS [p]
+      INNER JOIN [Product_Picture_Mapping] AS [pp] ON [p].[Id] = [pp].[PictureId]
+      WHERE [pp].[ProductId] = @__productId_0
+      ORDER BY [pp].[DisplayOrder], [pp].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (41ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[BinaryData], [e].[PictureId]
+      FROM [PictureBinary] AS [e]
+      WHERE [e].[PictureId] = @__get_Item_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (104ms) [Parameters=[@__languageId_0='?' (DbType = Int32), @__AdminLocaleStringResourcesPrefix_1='?' (Size = 200)], CommandType='Text', CommandTimeout='30']
+      SELECT [l].[Id], [l].[LanguageId], [l].[ResourceName], [l].[ResourceValue]
+      FROM [LocaleStringResource] AS [l]
+      WHERE ([l].[LanguageId] = @__languageId_0) AND ((NOT ([l].[ResourceName] LIKE @__AdminLocaleStringResourcesPrefix_1 + N'%') OR (LEFT([l].[ResourceName], LEN(@__AdminLocaleStringResourcesPrefix_1)) <> @__AdminLocaleStringResourcesPrefix_1)) AND (@__AdminLocaleStringResourcesPrefix_1 <> N''))
+      ORDER BY [l].[ResourceName]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@__languageId_0='?' (DbType = Int32), @__utcNow_1='?' (DbType = DateTime2), @__utcNow_2='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [News] AS [n]
+      WHERE (((@__languageId_0 = [n].[LanguageId]) AND ([n].[Published] = 1)) AND ([n].[StartDateUtc] IS NULL OR ([n].[StartDateUtc] <= @__utcNow_1))) AND ([n].[EndDateUtc] IS NULL OR ([n].[EndDateUtc] >= @__utcNow_2))
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__languageId_0='?' (DbType = Int32), @__utcNow_1='?' (DbType = DateTime2), @__utcNow_2='?' (DbType = DateTime2), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [n].[Id], [n].[AllowComments], [n].[CreatedOnUtc], [n].[EndDateUtc], [n].[Full], [n].[LanguageId], [n].[LimitedToStores], [n].[MetaDescription], [n].[MetaKeywords], [n].[MetaTitle], [n].[Published], [n].[Short], [n].[StartDateUtc], [n].[Title]
+      FROM [News] AS [n]
+      WHERE (((@__languageId_0 = [n].[LanguageId]) AND ([n].[Published] = 1)) AND ([n].[StartDateUtc] IS NULL OR ([n].[StartDateUtc] <= @__utcNow_1))) AND ([n].[EndDateUtc] IS NULL OR ([n].[EndDateUtc] >= @__utcNow_2))
+      ORDER BY COALESCE([n].[StartDateUtc], [n].[CreatedOnUtc]) DESC
+      OFFSET @__p_3 ROWS FETCH NEXT @__p_4 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (18ms) [Parameters=[@__utcNow_0='?' (DbType = DateTime2), @__utcNow_1='?' (DbType = DateTime2), @__languageId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [Poll] AS [poll]
+      WHERE (((([poll].[Published] = 1) AND ([poll].[StartDateUtc] IS NULL OR ([poll].[StartDateUtc] <= @__utcNow_0))) AND ([poll].[EndDateUtc] IS NULL OR ([poll].[EndDateUtc] >= @__utcNow_1))) AND ([poll].[ShowOnHomePage] = 1)) AND ([poll].[LanguageId] = @__languageId_2)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__utcNow_0='?' (DbType = DateTime2), @__utcNow_1='?' (DbType = DateTime2), @__languageId_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32), @__p_4='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [poll].[Id], [poll].[AllowGuestsToVote], [poll].[DisplayOrder], [poll].[EndDateUtc], [poll].[LanguageId], [poll].[LimitedToStores], [poll].[Name], [poll].[Published], [poll].[ShowOnHomePage], [poll].[StartDateUtc], [poll].[SystemKeyword]
+      FROM [Poll] AS [poll]
+      WHERE (((([poll].[Published] = 1) AND ([poll].[StartDateUtc] IS NULL OR ([poll].[StartDateUtc] <= @__utcNow_0))) AND ([poll].[EndDateUtc] IS NULL OR ([poll].[EndDateUtc] >= @__utcNow_1))) AND ([poll].[ShowOnHomePage] = 1)) AND ([poll].[LanguageId] = @__languageId_2)
+      ORDER BY [poll].[DisplayOrder], [poll].[Id]
+      OFFSET @__p_3 ROWS FETCH NEXT @__p_4 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (17ms) [Parameters=[@__get_Item_0='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [e].[Id], [e].[AttributesXml], [e].[CreatedOnUtc], [e].[CustomerEnteredPrice], [e].[CustomerId], [e].[ProductId], [e].[Quantity], [e].[RentalEndDateUtc], [e].[RentalStartDateUtc], [e].[ShoppingCartTypeId], [e].[StoreId], [e].[UpdatedOnUtc]
+      FROM [ShoppingCartItem] AS [e]
+      WHERE [e].[CustomerId] = @__get_Item_0
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (38ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [c].[Id], [c].[CreatedOnUtc], [c].[CurrencyCode], [c].[CustomFormatting], [c].[DisplayLocale], [c].[DisplayOrder], [c].[LimitedToStores], [c].[Name], [c].[Published], [c].[Rate], [c].[RoundingTypeId], [c].[UpdatedOnUtc]
+      FROM [Currency] AS [c]
+      WHERE [c].[Published] = 1
+      ORDER BY [c].[DisplayOrder], [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (78ms) [Parameters=[ShowHidden='?' (DbType = Boolean), Name='?', StoreId='?' (DbType = Int32), CustomerRoleIds='?', PageIndex='?' (DbType = Int32), PageSize='?' (DbType = Int32), TotalRecords='?' (Direction = Output) (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      CategoryLoadAllPaged @ShowHidden, @Name, @StoreId, @CustomerRoleIds, @PageIndex, @PageSize, @TotalRecords output
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__entityName_1='?' (Size = 400), @__languageId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [ur].[Slug]
+      FROM [UrlRecord] AS [ur]
+      WHERE ((([ur].[EntityId] = @__entityId_0) AND ([ur].[EntityName] = @__entityName_1)) AND ([ur].[LanguageId] = @__languageId_2)) AND ([ur].[IsActive] = 1)
+      ORDER BY [ur].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__entityName_1='?' (Size = 400), @__languageId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [ur].[Slug]
+      FROM [UrlRecord] AS [ur]
+      WHERE ((([ur].[EntityId] = @__entityId_0) AND ([ur].[EntityName] = @__entityName_1)) AND ([ur].[LanguageId] = @__languageId_2)) AND ([ur].[IsActive] = 1)
+      ORDER BY [ur].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__entityName_1='?' (Size = 400), @__languageId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [ur].[Slug]
+      FROM [UrlRecord] AS [ur]
+      WHERE ((([ur].[EntityId] = @__entityId_0) AND ([ur].[EntityName] = @__entityName_1)) AND ([ur].[LanguageId] = @__languageId_2)) AND ([ur].[IsActive] = 1)
+      ORDER BY [ur].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__entityName_1='?' (Size = 400), @__languageId_2='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [ur].[Slug]
+      FROM [UrlRecord] AS [ur]
+      WHERE ((([ur].[EntityId] = @__entityId_0) AND ([ur].[EntityName] = @__entityName_1)) AND ([ur].[LanguageId] = @__languageId_2)) AND ([ur].[IsActive] = 1)
+      ORDER BY [ur].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+      SELECT [t].[Id], [t].[AccessibleWhenStoreClosed], [t].[Body], [t].[DisplayOrder], [t].[IncludeInFooterColumn1], [t].[IncludeInFooterColumn2], [t].[IncludeInFooterColumn3], [t].[IncludeInSitemap], [t].[IncludeInTopMenu], [t].[IsPasswordProtected], [t].[LimitedToStores], [t].[MetaDescription], [t].[MetaKeywords], [t].[MetaTitle], [t].[Password], [t].[Published], [t].[SubjectToAcl], [t].[SystemName], [t].[Title], [t].[TopicTemplateId]
+      FROM [Topic] AS [t]
+      WHERE [t].[Published] = 1
+      ORDER BY [t].[DisplayOrder], [t].[SystemName]
+info: Microsoft.AspNetCore.Mvc.ViewFeatures.ViewResultExecutor[4]
+      Executed ViewResult - view Index executed in 32426.9788ms.
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.HomeController.Index (Nop.Web) in 33979.9188ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 38526.0951ms 200 text/html; charset=utf-8
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (25ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 20.3209ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 20.8287ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 71.9328ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (250ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (47ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (73ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (55ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (82ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (12ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (117ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 792.4955ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 793.7664ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 1129.6639ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 27.0214ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 27.5254ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 49.0355ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 25.2868ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 25.8655ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 46.4913ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 58
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Common.KeepAliveTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://localhost:55596/keepalive/index  
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__systemName_0='?' (Size = 255)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [cr].[Id], [cr].[Active], [cr].[DefaultTaxDisplayTypeId], [cr].[EnablePasswordLifetime], [cr].[FreeShipping], [cr].[IsSystemRole], [cr].[Name], [cr].[OverrideTaxDisplayType], [cr].[PurchasedWithProductId], [cr].[SystemName], [cr].[TaxExempt]
+      FROM [CustomerRole] AS [cr]
+      WHERE [cr].[SystemName] = @__systemName_0
+      ORDER BY [cr].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Guid), @p7='?' (DbType = Boolean), @p8='?' (Size = 1000), @p9='?' (Size = 1000), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p18='?' (DbType = Boolean), @p19='?' (DbType = Int32), @p20='?' (Size = 400), @p21='?' (Size = 1000), @p22='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customer] ([Active], [AdminComment], [AffiliateId], [BillingAddress_Id], [CannotLoginUntilDateUtc], [CreatedOnUtc], [CustomerGuid], [Deleted], [Email], [EmailToRevalidate], [FailedLoginAttempts], [HasShoppingCartItems], [IsSystemAccount], [IsTaxExempt], [LastActivityDateUtc], [LastIpAddress], [LastLoginDateUtc], [RegisteredInStoreId], [RequireReLogin], [ShippingAddress_Id], [SystemName], [Username], [VendorId])
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+      SELECT [Id]
+      FROM [Customer]
+      WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p23='?' (DbType = Int32), @p24='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customer_CustomerRole_Mapping] ([Customer_Id], [CustomerRole_Id])
+      VALUES (@p23, @p24);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "Index", controller = "KeepAlive", area = ""}. Executing action Nop.Web.Controllers.KeepAliveController.Index (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.KeepAliveController.Index (Nop.Web) - Validation state: Valid
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.KeepAliveController.Index (Nop.Web), returned result Microsoft.AspNetCore.Mvc.ContentResult in 0.0025ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor[1]
+      Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.KeepAliveController.Index (Nop.Web) in 0.5501ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 27.7635ms 200 text/plain; charset=utf-8
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 70.9496ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 71.5524ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 90.4575ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 48.85ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 49.3779ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 92.0656ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 26.7346ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 27.333ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 48.1447ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (0ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 21.0984ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 21.5789ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 38.7947ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 23.4196ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 23.9787ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 42.6146ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 24.5391ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 25.1354ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 45.2114ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 64
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Customers.DeleteGuestsTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (165ms) [Parameters=[OnlyWithoutShoppingCart='?' (DbType = Boolean), CreatedFromUtc='?' (DbType = DateTime), CreatedToUtc='?' (DbType = DateTime), TotalRecordsDeleted='?' (Direction = Output) (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      EXEC [DeleteGuests] @OnlyWithoutShoppingCart, @CreatedFromUtc, @CreatedToUtc, @TotalRecordsDeleted OUTPUT
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 209.6182ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 210.2248ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 233.8586ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 58
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Common.KeepAliveTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 GET http://localhost:55596/keepalive/index  
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__systemName_0='?' (Size = 255)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [cr].[Id], [cr].[Active], [cr].[DefaultTaxDisplayTypeId], [cr].[EnablePasswordLifetime], [cr].[FreeShipping], [cr].[IsSystemRole], [cr].[Name], [cr].[OverrideTaxDisplayType], [cr].[PurchasedWithProductId], [cr].[SystemName], [cr].[TaxExempt]
+      FROM [CustomerRole] AS [cr]
+      WHERE [cr].[SystemName] = @__systemName_0
+      ORDER BY [cr].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@p0='?' (DbType = Boolean), @p1='?' (Size = 4000), @p2='?' (DbType = Int32), @p3='?' (DbType = Int32), @p4='?' (DbType = DateTime2), @p5='?' (DbType = DateTime2), @p6='?' (DbType = Guid), @p7='?' (DbType = Boolean), @p8='?' (Size = 1000), @p9='?' (Size = 1000), @p10='?' (DbType = Int32), @p11='?' (DbType = Boolean), @p12='?' (DbType = Boolean), @p13='?' (DbType = Boolean), @p14='?' (DbType = DateTime2), @p15='?' (Size = 4000), @p16='?' (DbType = DateTime2), @p17='?' (DbType = Int32), @p18='?' (DbType = Boolean), @p19='?' (DbType = Int32), @p20='?' (Size = 400), @p21='?' (Size = 1000), @p22='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customer] ([Active], [AdminComment], [AffiliateId], [BillingAddress_Id], [CannotLoginUntilDateUtc], [CreatedOnUtc], [CustomerGuid], [Deleted], [Email], [EmailToRevalidate], [FailedLoginAttempts], [HasShoppingCartItems], [IsSystemAccount], [IsTaxExempt], [LastActivityDateUtc], [LastIpAddress], [LastLoginDateUtc], [RegisteredInStoreId], [RequireReLogin], [ShippingAddress_Id], [SystemName], [Username], [VendorId])
+      VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19, @p20, @p21, @p22);
+      SELECT [Id]
+      FROM [Customer]
+      WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@p23='?' (DbType = Int32), @p24='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      INSERT INTO [Customer_CustomerRole_Mapping] ([Customer_Id], [CustomerRole_Id])
+      VALUES (@p23, @p24);
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "Index", controller = "KeepAlive", area = ""}. Executing action Nop.Web.Controllers.KeepAliveController.Index (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.KeepAliveController.Index (Nop.Web) - Validation state: Valid
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.KeepAliveController.Index (Nop.Web), returned result Microsoft.AspNetCore.Mvc.ContentResult in 0.0025ms.
+info: Microsoft.AspNetCore.Mvc.Infrastructure.ContentResultExecutor[1]
+      Executing ContentResult with HTTP Response ContentType of text/plain; charset=utf-8
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.KeepAliveController.Index (Nop.Web) in 0.2269ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 28.0512ms 200 text/plain; charset=utf-8
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (14ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 1984.385ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 1984.9488ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 1995.5026ms 204 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (2ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 37.2024ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 37.8748ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 57.7811ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (9ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (10ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 49.9033ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 50.4325ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 73.9941ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (3ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (8ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 37.2144ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 37.8154ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 66.3963ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://localhost:55596/scheduletask/runtask application/x-www-form-urlencoded 69
+info: Microsoft.EntityFrameworkCore.Infrastructure[10403]
+      Entity Framework Core 2.1.1-rtm-30846 initialized 'NopObjectContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: using lazy-loading proxies 
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (5ms) [Parameters=[@__systemName_0='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [c].[Id], [c].[Active], [c].[AdminComment], [c].[AffiliateId], [c].[BillingAddress_Id], [c].[CannotLoginUntilDateUtc], [c].[CreatedOnUtc], [c].[CustomerGuid], [c].[Deleted], [c].[Email], [c].[EmailToRevalidate], [c].[FailedLoginAttempts], [c].[HasShoppingCartItems], [c].[IsSystemAccount], [c].[IsTaxExempt], [c].[LastActivityDateUtc], [c].[LastIpAddress], [c].[LastLoginDateUtc], [c].[RegisteredInStoreId], [c].[RequireReLogin], [c].[ShippingAddress_Id], [c].[SystemName], [c].[Username], [c].[VendorId]
+      FROM [Customer] AS [c]
+      WHERE [c].[SystemName] = @__systemName_0
+      ORDER BY [c].[Id]
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (84ms) [Parameters=[@__entityId_0='?' (DbType = Int32), @__keyGroup_1='?' (Size = 400)], CommandType='Text', CommandTimeout='30']
+      SELECT [ga].[Id], [ga].[EntityId], [ga].[Key], [ga].[KeyGroup], [ga].[StoreId], [ga].[Value]
+      FROM [GenericAttribute] AS [ga]
+      WHERE ([ga].[EntityId] = @__entityId_0) AND ([ga].[KeyGroup] = @__keyGroup_1)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Route matched with {action = "RunTask", controller = "ScheduleTask", area = ""}. Executing action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web)
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[1]
+      Executing action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) with arguments (Nop.Services.Messages.QueuedMessagesSendTask, Nop.Services) - Validation state: Valid
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (61ms) [Parameters=[@__type_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SELECT TOP(1) [st].[Id], [st].[Enabled], [st].[LastEndUtc], [st].[LastStartUtc], [st].[LastSuccessUtc], [st].[Name], [st].[Seconds], [st].[StopOnError], [st].[Type]
+      FROM [ScheduleTask] AS [st]
+      WHERE [st].[Type] = @__type_0
+      ORDER BY [st].[Id] DESC
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (4ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (6ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT COUNT(*)
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (7ms) [Parameters=[@__nowUtc_0='?' (DbType = DateTime2), @__maxSendTries_1='?' (DbType = Int32), @__p_2='?' (DbType = Int32), @__p_3='?' (DbType = Int32)], CommandType='Text', CommandTimeout='30']
+      SELECT [qe].[Id], [qe].[AttachedDownloadId], [qe].[AttachmentFileName], [qe].[AttachmentFilePath], [qe].[Bcc], [qe].[Body], [qe].[CC], [qe].[CreatedOnUtc], [qe].[DontSendBeforeDateUtc], [qe].[EmailAccountId], [qe].[From], [qe].[FromName], [qe].[PriorityId], [qe].[ReplyTo], [qe].[ReplyToName], [qe].[SentOnUtc], [qe].[SentTries], [qe].[Subject], [qe].[To], [qe].[ToName]
+      FROM [QueuedEmail] AS [qe]
+      WHERE ([qe].[SentOnUtc] IS NULL AND ([qe].[DontSendBeforeDateUtc] IS NULL OR ([qe].[DontSendBeforeDateUtc] <= @__nowUtc_0))) AND ([qe].[SentTries] < @__maxSendTries_1)
+      ORDER BY [qe].[PriorityId] DESC, [qe].[CreatedOnUtc]
+      OFFSET @__p_2 ROWS FETCH NEXT @__p_3 ROWS ONLY
+info: Microsoft.EntityFrameworkCore.Database.Command[20101]
+      Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Int32), @p0='?' (DbType = Boolean), @p1='?' (DbType = DateTime2), @p2='?' (DbType = DateTime2), @p3='?' (DbType = DateTime2), @p4='?' (Size = 4000), @p5='?' (DbType = Int32), @p6='?' (DbType = Boolean), @p7='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+      SET NOCOUNT ON;
+      UPDATE [ScheduleTask] SET [Enabled] = @p0, [LastEndUtc] = @p1, [LastStartUtc] = @p2, [LastSuccessUtc] = @p3, [Name] = @p4, [Seconds] = @p5, [StopOnError] = @p6, [Type] = @p7
+      WHERE [Id] = @p8;
+      SELECT @@ROWCOUNT;
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action method Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web), returned result Microsoft.AspNetCore.Mvc.NoContentResult in 101.9619ms.
+info: Microsoft.AspNetCore.Mvc.StatusCodeResult[1]
+      Executing HttpStatusCodeResult, setting HTTP status code 204
+info: Microsoft.AspNetCore.Mvc.Internal.ControllerActionInvoker[2]
+      Executed action Nop.Web.Controllers.ScheduleTaskController.RunTask (Nop.Web) in 102.5647ms
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 203.137ms 204 
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:7380/iisintegration  0
+info: Microsoft.AspNetCore.Hosting.Internal.WebHost[2]
+      Request finished in 1.2353ms 202 
+Application is shutting down...

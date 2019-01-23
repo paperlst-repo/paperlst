@@ -1,0 +1,84 @@
+﻿body {
+}
+
+
+.footer-block {
+    width: 20% !important;
+}
+
+    .footer-block.customer-service {
+        width: 40% !important;
+    }
+
+    .footer-block.follow-us {
+        width: 40% !important;
+    }
+
+    .footer-block.follow-us {
+        height: 70px;
+    }
+
+.full-description img {
+    width: 100%;
+}
+
+.title-number {
+    background-color: black;
+    color: white;
+    font-size: 1.5em !important;
+    font-weight: 600;
+    padding: 11px 21px !important;
+    margin: 20px 0px -10px 0px !important;
+    text-align: left !important;
+}
+
+.social .networks li {
+    float: right;
+}
+
+@media (max-width: 767px) {
+    .footer-block {
+        display: inherit !important;
+    }
+
+        .footer-block.customer-service {
+            width: 100% !important;
+        }
+}
+
+.item-box .picture {
+    margin-bottom: 0px !important;
+}
+
+.details {
+    padding: 0px !important;
+    font-weight: 600;
+    color: #2d2a2a;
+}
+
+    .details a[data-category="NATURE"] {
+        background-color: #f59f58;
+    }
+
+        .details a[data-category="NATURE"]:hover {
+            background-color: #ef8834;
+        }
+
+
+
+        .details a {
+            float: left;
+            padding: 4px !important;
+        }
+
+    .details span {
+        float: right;
+        padding: 4px !important;
+        color: #444444;
+    }
+
+    .details h2 {
+        text-transform: uppercase !important;
+        font-weight: 600 !important;
+        clear: both;
+    }

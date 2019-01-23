@@ -1,0 +1,23 @@
+﻿@model Nop4you.Plugin.Widgets.ThemeGrandNode.Models.ConfigurationModel
+
+<div class="form-group">
+    <div class="col-md-3">
+        <nop-label asp-for="useCustomOrdersTemplate" />
+    </div>
+    <div class="col-md-9">
+        <nop-editor asp-for="useCustomOrdersTemplate" />
+        <span asp-validation-for="useCustomOrdersTemplate"></span>
+    </div>
+</div>
+
+<div class="form-group">
+    <div class="col-md-3">
+        <nop-label asp-for="storeCustomOrdersTemplate" />
+    </div>
+    <div class="col-md-9 template">
+        <div class="row">
+            <div class="col-md-2"><label><img src="~/Plugins/Widgets.ThemeGrandNode/Content/images/standard.png" /> @Html.RadioButtonFor(model => model.storeCustomOrdersTemplate, "standard")</label></div>
+            <div class="col-md-2"><label><img src="~/Plugins/Widgets.ThemeGrandNode/Content/images/cards.png" />@Html.RadioButtonFor(model => model.storeCustomOrdersTemplate, "cards")</label></div>
+        </div>
+    </div>
+</div>
