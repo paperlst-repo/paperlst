@@ -6648,7 +6648,7 @@ pre {
 
 .scrollToTop {
     position: fixed;
-    bottom: 15px;
+    bottom: 42px;
     right: 15px;
     display: none;
     width: 40px;

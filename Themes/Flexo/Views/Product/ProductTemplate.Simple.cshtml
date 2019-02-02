@@ -43,6 +43,23 @@
         Html.AddHeadCustomParts("<meta property=\"twitter:url\" content=\"" + webHelper.GetThisPageUrl(true) + "\" />");
     }
 }
+
+
+@{
+
+    Html.AppendCssFileParts("~/lib/jquery-floating-social-share/jquery.floating-social-share.min.css");
+    Html.AppendScriptParts("~/lib/jquery-floating-social-share/jquery.floating-social-share.min.js");
+}
+
+<script>
+    $(document).ready(function () {
+        $("body").floatingSocialShare({
+            buttons: ["facebook", "twitter", "linkedin", "google-plus"],
+            text: "share with:"
+        });
+    });
+</script>
+
 <!--product breadcrumb-->
 @section Breadcrumb
 {
@@ -79,7 +96,7 @@
                         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsInsideOverviewButtonsAfter, additionalData = Model })
                     </div>
                     <div class="shares-section">
-                     
+
                         @await Html.PartialAsync("_ShareButton", Model)
                     </div>
                     @if (!string.IsNullOrEmpty(Model.FullDescription))
