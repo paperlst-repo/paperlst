@@ -469,7 +469,7 @@
 </script>
 
 <div class="raw clearfix">
-    <div class="@(Model.ProductEditorSettingsModel.OneColumnProductPage ? "col-md-12" : "col-md-7")">
+    <div class="@(Model.ProductEditorSettingsModel.OneColumnProductPage ? "col-md-12" : "col-md-12")">
         <div class="panel-group">
             @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.ProductDetailsInfoColumnLeftTop, additionalData = Model })
             <div class="panel panel-default">
@@ -616,7 +616,7 @@
                             <span asp-validation-for="ProductTags"></span>
                         </div>
                     </div>
-                    <div class="form-group @(Model.ProductEditorSettingsModel.GTIN ? null : "advanced-setting")">
+                    @*<div class="form-group @(Model.ProductEditorSettingsModel.GTIN ? null : "advanced-setting")">
                         <div class="col-md-3">
                             <nop-label asp-for="Gtin" />
                         </div>
@@ -624,8 +624,8 @@
                             <nop-editor asp-for="Gtin" />
                             <span asp-validation-for="Gtin"></span>
                         </div>
-                    </div>
-                    <div class="form-group @(Model.ProductEditorSettingsModel.ManufacturerPartNumber ? null : "advanced-setting")">
+                    </div>*@
+                    @*<div class="form-group @(Model.ProductEditorSettingsModel.ManufacturerPartNumber ? null : "advanced-setting")">
                         <div class="col-md-3">
                             <nop-label asp-for="ManufacturerPartNumber" />
                         </div>
@@ -633,7 +633,7 @@
                             <nop-editor asp-for="ManufacturerPartNumber" />
                             <span asp-validation-for="ManufacturerPartNumber"></span>
                         </div>
-                    </div>
+                    </div>*@
                     <div class="form-group @(Model.ProductEditorSettingsModel.ShowOnHomePage ? null : "advanced-setting")" @(Model.IsLoggedInAsVendor ? Html.Raw("style='display: none;'") : null)>
                         <div class="col-md-3">
                             <nop-label asp-for="ShowOnHomePage" />
@@ -663,7 +663,7 @@
                             <span asp-validation-for="AllowCustomerReviews"></span>
                         </div>
                     </div>
-                    <div class="form-group @(Model.ProductEditorSettingsModel.AvailableStartDate ? null : "advanced-setting")">
+                    @*<div class="form-group @(Model.ProductEditorSettingsModel.AvailableStartDate ? null : "advanced-setting")">
                         <div class="col-md-3">
                             <nop-label asp-for="AvailableStartDateTimeUtc" />
                         </div>
@@ -680,8 +680,8 @@
                             <nop-editor asp-for="AvailableEndDateTimeUtc" />
                             <span asp-validation-for="AvailableEndDateTimeUtc"></span>
                         </div>
-                    </div>
-                    <div class="form-group @(Model.ProductEditorSettingsModel.MarkAsNew ? null : "advanced-setting")">
+                    </div>*@
+                    @*<div class="form-group @(Model.ProductEditorSettingsModel.MarkAsNew ? null : "advanced-setting")">
                         <div class="col-md-3">
                             <nop-label asp-for="MarkAsNew" />
                         </div>
@@ -709,7 +709,7 @@
                                 <span asp-validation-for="MarkAsNewEndDateTimeUtc"></span>
                             </div>
                         </div>
-                    </nop-nested-setting>
+                    </nop-nested-setting>*@
                     <div class="form-group @(Model.ProductEditorSettingsModel.AdminComment ? null : "advanced-setting")">
                         <div class="col-md-3">
                             <nop-label asp-for="AdminComment" />
@@ -743,7 +743,7 @@
                     }
                 </div>
             </div>
-            <div class="panel panel-default @(Model.ProductEditorSettingsModel.IsGiftCard ? null : "advanced-setting")" id="group-giftcard">
+            @*<div class="panel panel-default @(Model.ProductEditorSettingsModel.IsGiftCard ? null : "advanced-setting")" id="group-giftcard">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.GiftCard")
                 </div>
@@ -778,8 +778,8 @@
                         </div>
                     </nop-nested-setting>
                 </div>
-            </div>
-            <div class="panel panel-default @(Model.ProductEditorSettingsModel.DownloadableProduct ? null : "advanced-setting")" id="group-downloads">
+            </div>*@
+            @*<div class="panel panel-default @(Model.ProductEditorSettingsModel.DownloadableProduct ? null : "advanced-setting")" id="group-downloads">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.DownloadableProduct")
                 </div>
@@ -879,8 +879,8 @@
                         </nop-nested-setting>
                     </nop-nested-setting>
                 </div>
-            </div>
-            <div class="panel panel-default @(Model.ProductEditorSettingsModel.RecurringProduct ? null : "advanced-setting")" id="group-recurring">
+            </div>*@
+            @*<div class="panel panel-default @(Model.ProductEditorSettingsModel.RecurringProduct ? null : "advanced-setting")" id="group-recurring">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.RecurringProduct")
                 </div>
@@ -924,8 +924,8 @@
                         </div>
                     </nop-nested-setting>
                 </div>
-            </div>
-            <div class="panel panel-default @(Model.ProductEditorSettingsModel.IsRental ? null : "advanced-setting")" id="group-rental">
+            </div>*@
+            @*<div class="panel panel-default @(Model.ProductEditorSettingsModel.IsRental ? null : "advanced-setting")" id="group-rental">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.Rental")
                 </div>
@@ -960,8 +960,8 @@
                         </div>
                     </nop-nested-setting>
                 </div>
-            </div>
-            <div class="panel panel-default" id="group-prices">
+            </div>*@
+            @*<div class="panel panel-default" id="group-prices">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.Prices")
                 </div>
@@ -1314,11 +1314,11 @@
                         @T("Admin.Catalog.Products.TierPrices.SaveBeforeEdit")
                     </div>
                 }
-            </div>
+            </div>*@
             @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.ProductDetailsInfoColumnLeftBottom, additionalData = Model })
         </div>
     </div>
-    <div class="@(Model.ProductEditorSettingsModel.OneColumnProductPage ? "col-md-12" : "col-md-5")">
+    <div class="@(Model.ProductEditorSettingsModel.OneColumnProductPage ? "col-md-12" : "col-md-12")">
         <div class="panel-group">
             @{
                 var leftColumnClass = Model.ProductEditorSettingsModel.OneColumnProductPage ? "col-md-3" : "col-md-4";
@@ -1471,7 +1471,7 @@
                     </div>
                 }
             </div>
-            <div class="panel panel-default no-margin" id="group-inventory">
+            @*<div class="panel panel-default no-margin" id="group-inventory">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.Inventory")
                 </div>
@@ -1712,8 +1712,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="panel panel-default" id="group-shipping">
+            </div>*@
+            @*<div class="panel panel-default" id="group-shipping">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.Shipping")
                 </div>
@@ -1802,8 +1802,8 @@
                         </div>
                     </nop-nested-setting>
                 </div>
-            </div>
-            <div class="panel panel-default">
+            </div>*@
+            <div class=" col-md-6  panel panel-default">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.Mappings")
                 </div>
@@ -1906,7 +1906,7 @@
                     </div>
                 </div>
             </div>
-            <div class="panel panel-default @(Model.ProductEditorSettingsModel.ACL ? null : "advanced-setting")">
+            @*<div class="panel panel-default @(Model.ProductEditorSettingsModel.ACL ? null : "advanced-setting")">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.Security")
                 </div>
@@ -1941,8 +1941,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="panel panel-default @(Model.ProductEditorSettingsModel.RequireOtherProductsAddedToTheCart ? null : "advanced-setting")" id="group-required-other-products">
+            </div>*@
+            @*<div class="panel panel-default @(Model.ProductEditorSettingsModel.RequireOtherProductsAddedToTheCart ? null : "advanced-setting")" id="group-required-other-products">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.RequireOtherProducts")
                 </div>
@@ -2000,8 +2000,8 @@
                         </div>
                     </nop-nested-setting>
                 </div>
-            </div>
-            <div class="panel panel-default @(Model.ProductEditorSettingsModel.RelatedProducts ? null : "advanced-setting")">
+            </div>*@
+            <div class="col-md-6 panel panel-default @(Model.ProductEditorSettingsModel.RelatedProducts ? null : "advanced-setting")">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.RelatedProducts")
                 </div>
@@ -2141,7 +2141,7 @@
                     </div>
                 }
             </div>
-            <div class="panel panel-default @(Model.ProductEditorSettingsModel.CrossSellsProducts ? null : "advanced-setting")">
+            @*<div class="panel panel-default @(Model.ProductEditorSettingsModel.CrossSellsProducts ? null : "advanced-setting")">
                 <div class="panel-heading">
                     @T("Admin.Catalog.Products.CrossSells")
                 </div>
@@ -2250,7 +2250,7 @@
                         @T("Admin.Catalog.Products.CrossSells.SaveBeforeEdit")
                     </div>
                 }
-            </div>
+            </div>*@
             @await Component.InvokeAsync("AdminWidget", new { widgetZone = AdminWidgetZones.ProductDetailsInfoColumnRightBottom, additionalData = Model })
         </div>
     </div>
