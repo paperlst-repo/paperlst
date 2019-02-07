@@ -46,9 +46,19 @@
         }
 }
 
-.item-box .picture {
-    margin-bottom: 0px !important;
+
+.item-box {
+    margin-bottom: 30px !important;
 }
+
+    .item-box .picture {
+        margin-bottom: 0px !important;
+    }
+
+        .item-box .picture a img {
+            background-color: black;
+        }
+
 
 .details {
     padding: 0px !important;
@@ -56,20 +66,83 @@
     color: #2d2a2a;
 }
 
+    .details a[data-category] {
+        width: 70px;
+    }
+
+
+
     .details a[data-category="NATURE"] {
-        background-color: #f59f58;
+        background-color: #b1f1b9;
     }
 
         .details a[data-category="NATURE"]:hover {
-            background-color: #ef8834;
+            background-color: #87f194;
+        }
+
+    .details a[data-category="TV"] {
+        background-color: #f7c9a3;
+    }
+
+        .details a[data-category="TV"]:hover {
+            background-color: #fbbe8c;
+        }
+
+    .details a[data-category="Sports"] {
+        background-color: #c2d3f9;
+    }
+
+        .details a[data-category="Sports"]:hover {
+            background-color: #adc0ec;
+        }
+
+    .details a[data-category="Music"] {
+        background-color: #f7c3ec;
+    }
+
+        .details a[data-category="Music"]:hover {
+            background-color: #f5a1e3;
+        }
+
+    .details a[data-category="Cool"] {
+        background-color: #fdf399;
+    }
+
+        .details a[data-category="Cool"]:hover {
+            background-color: #e8dd72;
+        }
+
+    .details a[data-category="Games"] {
+        background-color: #dadada;
+    }
+
+        .details a[data-category="Games"]:hover {
+            background-color: #c5c5c5;
+        }
+
+    .details a[data-category="Evolution"] {
+        background-color: #bbf5ea;
+    }
+
+        .details a[data-category="Evolution"]:hover {
+            background-color: #93f9e5;
+        }
+
+
+    .details a[data-category="Art"] {
+        background-color: #f9c9c9;
+    }
+
+        .details a[data-category="Art"]:hover {
+            background-color: #f7a5a5;
         }
 
 
 
-        .details a {
-            float: left;
-            padding: 4px !important;
-        }
+    .details a {
+        float: left;
+        padding: 4px !important;
+    }
 
     .details span {
         float: right;
@@ -82,3 +155,14 @@
         font-weight: 600 !important;
         clear: both;
     }
+
+.product-item {
+    border: 1px solid #888888;
+    -webkit-box-shadow: -5px 7px 3px -1px rgba(0,0,0,0.61);
+    -moz-box-shadow: -5px 7px 3px -1px rgba(0,0,0,0.61);
+    box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.61);
+}
+
+.block-recently-viewed-products .list li{
+    margin-bottom:4px;
+}

@@ -6,7 +6,7 @@
             <strong>@T("HomePage.Products")</strong>
         </div>
         <div class="item-grid">
-            @foreach (var item in Model)
+            @foreach (var item in Model.OrderByDescending(p => DateTime.Parse(p.Sku)).ToList())
             {
                 <div class="item-box">
                     @await Html.PartialAsync("_ProductBox", item)
