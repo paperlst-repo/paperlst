@@ -1,6 +1,9 @@
 ﻿body {
 }
 
+h1 {
+    font-size: 32px !important;
+}
 
 .footer-block {
     width: 20% !important;
@@ -20,6 +23,10 @@
 
 .full-description img {
     width: 100%;
+}
+
+.footer-info {
+    width: unset !important;
 }
 
 .title-number {
@@ -67,7 +74,7 @@
 }
 
     .details a[data-category] {
-        width: 70px;
+        width: 77px;
     }
 
 
@@ -138,9 +145,57 @@
         }
 
 
+    .details a[data-category="Technology"] {
+        background-color: #b9dbf7;
+    }
+
+        .details a[data-category="Technology"]:hover {
+            background-color: #97b8d4;
+        }
+
+    .details a[data-category="Foods"] {
+        background-color: #ffc6c1;
+    }
+
+        .details a[data-category="Foods"]:hover {
+            background-color: #f9b8b2;
+        }
+
+    .details a[data-category="Politics"] {
+        background-color: #c9b0ce;
+    }
+
+        .details a[data-category="Politics"]:hover {
+            background-color: #c5a2cc;
+        }
+
+    .details a[data-category="Nature"] {
+        background-color: #b3f9e1;
+    }
+
+        .details a[data-category="Nature"]:hover {
+            background-color: #9ef3d6;
+        }
+
+    .details a[data-category="Health"] {
+        background-color: #e6ef93;
+    }
+
+        .details a[data-category="Health"]:hover {
+            background-color: #dbe66f;
+        }
+
+    .details a[data-category="Animals"] {
+        background-color: #bff5b1;
+    }
+
+        .details a[data-category="Animals"]:hover {
+            background-color: #b3f5a1;
+        }
 
     .details a {
         float: left;
+        width: 100%;
         padding: 4px !important;
     }
 
@@ -163,6 +218,15 @@
     box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.61);
 }
 
-.block-recently-viewed-products .list li{
-    margin-bottom:4px;
+.block-recently-viewed-products .list li {
+    margin-bottom: 4px;
 }
+
+div[class^="footer-p"] {
+    color: #151414;
+    float:right;
+}
+
+    div[class^="footer-p"] a {
+        color: #151414;
+    }

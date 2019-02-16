@@ -26,8 +26,8 @@
     {
         Html.AddHeadCustomParts("<meta property=\"og:type\" content=\"product\" />");
         Html.AddHeadCustomParts("<meta property=\"og:title\" content=\"" + Html.Encode(Model.Name) + "\" />");
-        Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"" + Html.Encode(Nop.Core.Html.HtmlHelper.StripTags(Model.MetaDescription)) + "\" />");
-        Html.AddHeadCustomParts("<meta property=\"og:image\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:description\" content=\"&hellip;" /* + Html.Encode(Nop.Core.Html.HtmlHelper.StripTags(Model.MetaDescription)) */+ "\" />");
+        Html.AddHeadCustomParts("<meta property=\"og:image:secure_url\" content=\"" + Model.DefaultPictureModel.ImageUrl + "\" />");
         Html.AddHeadCustomParts("<meta property=\"og:url\" content=\"" + webHelper.GetThisPageUrl(true) + "\" />");
         Html.AddHeadCustomParts("<meta property=\"og:site_name\" content=\"" + Html.Encode(Model.CurrentStoreName) + "\" />");
     }
@@ -78,9 +78,9 @@
                     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsAfterPictures, additionalData = Model })
 
                     <div class="product-name">
-                        <h2 itemprop="name">
+                        <h1 itemprop="name">
                             @Model.Name
-                        </h2>
+                        </h1>
                     </div>
 
                     <!--wishlist, compare, email a friend-->
