@@ -1,0 +1,250 @@
+﻿body {
+}
+
+h1 {
+    font-size: 32px !important;
+}
+
+.footer-block {
+    width: 20% !important;
+}
+
+    .footer-block.customer-service {
+        width: 40% !important;
+    }
+
+    .footer-block.follow-us {
+        width: 40% !important;
+    }
+
+    .footer-block.follow-us {
+        height: 70px;
+    }
+
+.full-description img {
+    width: 100%;
+}
+
+.footer-info {
+    width: unset !important;
+}
+
+.title-number {
+    background-color: black;
+    color: white;
+    font-size: 1.5em !important;
+    font-weight: 600;
+    padding: 11px 21px !important;
+    margin: 20px 0px -10px 0px !important;
+    text-align: left !important;
+}
+
+.social .networks li {
+    float: right;
+}
+
+@media (max-width: 767px) {
+    .footer-block {
+        display: inherit !important;
+    }
+
+        .footer-block.customer-service {
+            width: 100% !important;
+        }
+}
+
+.item-box {
+    margin-bottom: 30px !important;
+}
+
+    .item-box .picture {
+        margin-bottom: 0px !important;
+    }
+
+        .item-box .picture a img {
+            background-color: black;
+        }
+
+
+.details {
+    padding: 0px !important;
+    font-weight: 600;
+    color: #2d2a2a;
+}
+
+    .details a[data-category] {
+        width: 77px;
+    }
+
+
+
+    .details a[data-category="NATURE"] {
+        background-color: #b1f1b9;
+    }
+
+        .details a[data-category="NATURE"]:hover {
+            background-color: #87f194;
+        }
+
+    .details a[data-category="TV"] {
+        background-color: #f7c9a3;
+    }
+
+        .details a[data-category="TV"]:hover {
+            background-color: #fbbe8c;
+        }
+
+    .details a[data-category="Sports"] {
+        background-color: #c2d3f9;
+    }
+
+        .details a[data-category="Sports"]:hover {
+            background-color: #adc0ec;
+        }
+
+    .details a[data-category="Music"] {
+        background-color: #f7c3ec;
+    }
+
+        .details a[data-category="Music"]:hover {
+            background-color: #f5a1e3;
+        }
+
+    .details a[data-category="Cool"] {
+        background-color: #fdf399;
+    }
+
+        .details a[data-category="Cool"]:hover {
+            background-color: #e8dd72;
+        }
+
+    .details a[data-category="Games"] {
+        background-color: #dadada;
+    }
+
+        .details a[data-category="Games"]:hover {
+            background-color: #c5c5c5;
+        }
+
+    .details a[data-category="Evolution"] {
+        background-color: #bbf5ea;
+    }
+
+        .details a[data-category="Evolution"]:hover {
+            background-color: #93f9e5;
+        }
+
+
+    .details a[data-category="Art"] {
+        background-color: #f9c9c9;
+    }
+
+        .details a[data-category="Art"]:hover {
+            background-color: #f7a5a5;
+        }
+
+
+    .details a[data-category="Technology"] {
+        background-color: #b9dbf7;
+    }
+
+        .details a[data-category="Technology"]:hover {
+            background-color: #97b8d4;
+        }
+
+    .details a[data-category="Foods"] {
+        background-color: #ffc6c1;
+    }
+
+        .details a[data-category="Foods"]:hover {
+            background-color: #f9b8b2;
+        }
+
+    .details a[data-category="Politics"] {
+        background-color: #c9b0ce;
+    }
+
+        .details a[data-category="Politics"]:hover {
+            background-color: #c5a2cc;
+        }
+
+    .details a[data-category="Nature"] {
+        background-color: #b3f9e1;
+    }
+
+        .details a[data-category="Nature"]:hover {
+            background-color: #9ef3d6;
+        }
+
+    .details a[data-category="Health"] {
+        background-color: #e6ef93;
+    }
+
+        .details a[data-category="Health"]:hover {
+            background-color: #dbe66f;
+        }
+
+    .details a[data-category="Animals"] {
+        background-color: #bff5b1;
+    }
+
+        .details a[data-category="Animals"]:hover {
+            background-color: #b3f5a1;
+        }
+
+    .details a {
+        float: left;
+        width: 100%;
+        padding: 4px !important;
+    }
+
+    .details span {
+        float: right;
+        padding: 4px !important;
+        color: #444444;
+    }
+
+    .details h2 {
+        text-transform: uppercase !important;
+        font-weight: 600 !important;
+        clear: both;
+    }
+
+.product-item {
+    border: 1px solid #888888;
+    -webkit-box-shadow: -5px 7px 3px -1px rgba(0,0,0,0.61);
+    -moz-box-shadow: -5px 7px 3px -1px rgba(0,0,0,0.61);
+    box-shadow: -2px 2px 3px 0px rgba(0,0,0,0.61);
+}
+
+
+.block-recently-viewed-products .list li {
+    margin-bottom: 4px;
+}
+
+div[class^="footer-p"] {
+    color: #151414;
+    float: right;
+}
+
+    div[class^="footer-p"] a {
+        color: #151414;
+    }
+
+
+.fb-comments > iframe {
+    width: 100%;
+}
+
+.banner-top-center {
+    text-align: center !important;
+    margin: 9px !important;
+}
+
+.fb-like {
+    margin-bottom: 35px;
+}
+
+.product-essential {
+    margin: 0 0 12px !important;
+}

@@ -1,0 +1,16 @@
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Web.Framework.deps.json
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Web.Framework.dll
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Web.Framework.pdb
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Core.dll
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Data.dll
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Services.dll
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Core.pdb
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Data.pdb
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\bin\Release\netcoreapp2.1\Nop.Services.pdb
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\obj\Release\netcoreapp2.1\Nop.Web.Framework.csprojAssemblyReference.cache
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\obj\Release\netcoreapp2.1\Nop.Web.Framework.csproj.CoreCompileInputs.cache
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\obj\Release\netcoreapp2.1\Nop.Web.Framework.AssemblyInfoInputs.cache
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\obj\Release\netcoreapp2.1\Nop.Web.Framework.AssemblyInfo.cs
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\obj\Release\netcoreapp2.1\Nop.Web.Framework.csproj.CopyComplete
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\obj\Release\netcoreapp2.1\Nop.Web.Framework.dll
+C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Presentation\Nop.Web.Framework\obj\Release\netcoreapp2.1\Nop.Web.Framework.pdb

@@ -1,0 +1,32 @@
+﻿@model IList<ProductOverviewModel>
+@if (Model.Count > 0)
+{
+    @*<div class="product-grid home-page-product-grid">
+        <div class="title">
+            <strong>@T("HomePage.Products")</strong>
+        </div>
+        <div class="item-grid">*@
+    @foreach (var item in Model.ToList())
+    {
+        <div class="item-box">
+            @await Html.PartialAsync("_ProductBox", item)
+        </div>
+    }
+    @*</div>
+        </div>*@
+    @*<div class="showmore-wrapper "><a href="#" class="button-1">SHOW MORE</a></div>*@
+}
+@*
+    <div class="banner-top-center">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- Automatico 2 - home -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-5293600236951833"
+             data-ad-slot="7333468808"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>*@
