@@ -1,0 +1,14 @@
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Shipping.UPS\plugin.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Shipping.UPS\Views\Configure.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Shipping.UPS\Views\_ViewImports.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Shipping.UPS\logo.jpg
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.deps.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Shipping.UPS\Nop.Plugin.Shipping.UPS.pdb
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Shipping.UPS\obj\Release\netcoreapp2.1\Nop.Plugin.Shipping.UPS.csprojAssemblyReference.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Shipping.UPS\obj\Release\netcoreapp2.1\Nop.Plugin.Shipping.UPS.csproj.CoreCompileInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Shipping.UPS\obj\Release\netcoreapp2.1\Nop.Plugin.Shipping.UPS.AssemblyInfoInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Shipping.UPS\obj\Release\netcoreapp2.1\Nop.Plugin.Shipping.UPS.AssemblyInfo.cs
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Shipping.UPS\obj\Release\netcoreapp2.1\Nop.Plugin.Shipping.UPS.csproj.CopyComplete
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Shipping.UPS\obj\Release\netcoreapp2.1\Nop.Plugin.Shipping.UPS.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Shipping.UPS\obj\Release\netcoreapp2.1\Nop.Plugin.Shipping.UPS.pdb

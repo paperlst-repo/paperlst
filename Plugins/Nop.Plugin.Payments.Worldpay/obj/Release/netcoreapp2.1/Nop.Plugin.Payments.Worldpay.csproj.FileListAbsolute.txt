@@ -1,0 +1,17 @@
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\plugin.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\Views\Configure.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\Views\PaymentInfo.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\Views\_ViewImports.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\Views\Customer\_CreateOrUpdate.Worldpay.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\cards.jpg
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\logo.jpg
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\Nop.Plugin.Payments.Worldpay.deps.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\Nop.Plugin.Payments.Worldpay.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Worldpay\Nop.Plugin.Payments.Worldpay.pdb
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Worldpay\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Worldpay.csprojAssemblyReference.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Worldpay\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Worldpay.csproj.CoreCompileInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Worldpay\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Worldpay.AssemblyInfoInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Worldpay\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Worldpay.AssemblyInfo.cs
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Worldpay\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Worldpay.csproj.CopyComplete
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Worldpay\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Worldpay.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Worldpay\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Worldpay.pdb

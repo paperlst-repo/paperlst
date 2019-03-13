@@ -211,6 +211,7 @@ h1 {
     }
 
 .product-item {
+    background-color:#FFF;
     border: 1px solid #888888;
     -webkit-box-shadow: -5px 7px 3px -1px rgba(0,0,0,0.61);
     -moz-box-shadow: -5px 7px 3px -1px rgba(0,0,0,0.61);
@@ -233,12 +234,15 @@ div[class^="footer-p"] {
 
 
 .fb-comments > iframe {
-    width: 100%;
+    width: 100% !important;
 }
 
 .banner-top-center {
     text-align: center !important;
-    margin: 9px !important;
+    margin-bottom: 30px;
+    margin-top:10px;
+    clear: both;
+    width: 100%;
 }
 
 .fb-like {
@@ -247,4 +251,34 @@ div[class^="footer-p"] {
 
 .product-essential {
     margin: 0 0 12px !important;
+}
+
+.divAnchoPagina {
+    background-image: url("https://paperlst.com/Themes/Flexo/Content/images/bkg.jpg");
+    background-color: #FFF;
+    padding: 25px 85px 15px 85px;
+    margin-left: -85px;
+    margin-right: -85px;
+}
+
+@media (max-width: 1200px) {
+    .divAnchoPagina {
+        background-image: url("https://paperlst.com/Themes/Flexo/Content/images/bkg.jpg");
+        background-color: #FFF;
+        padding: 25px 15px 15px 15px;
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+}
+
+.product-details-page .full-description a {
+    color: #6358f7;
+    font-weight: 700;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.product-details-page .full-description a:hover {
+    color: #3e36ab;
+    text-decoration: underline;
 }

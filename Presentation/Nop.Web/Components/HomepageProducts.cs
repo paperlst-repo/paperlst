@@ -1,5 +1,7 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using Nop.Core.Domain.Catalog;
 using Nop.Services.Catalog;
 using Nop.Services.Security;
 using Nop.Services.Stores;
@@ -42,13 +44,22 @@ namespace Nop.Web.Components
         //    return View(model);
         //}
 
-        public IViewComponentResult Invoke(int? productThumbPictureSize, int items, int page)
+        public IViewComponentResult Invoke(int? productThumbPictureSize, int items, int page, bool recommended)
         {
-            var products = _productService.GetAllProductsDisplayedOnHomePage().OrderByDescending(o => o.CreatedOnUtc).Skip((page -1) * items).Take(items).ToList();
+            var products = new List<Product>();
+            if (recommended)
+            {
+                products = _productService.GetAllProductsDisplayedOnHomePage().Where(p => p.AllowCustomerReviews).OrderByDescending(o => o.CreatedOnUtc).Take(items).ToList();
+            }
+            else
+            {
+                products = _productService.GetAllProductsDisplayedOnHomePage().OrderByDescending(o => o.CreatedOnUtc).Skip((page - 1) * items).Take(items).ToList();
+            }
+
             //ACL and store mapping
             products = products.Where(p => _aclService.Authorize(p) && _storeMappingService.Authorize(p)).ToList();
             //availability dates
-            products = products.Where(p => _productService.ProductIsAvailable(p)).ToList();
+            //products = products.Where(p => _productService.ProductIsAvailable(p)).ToList();
 
             if (!products.Any())
                 return Content("");

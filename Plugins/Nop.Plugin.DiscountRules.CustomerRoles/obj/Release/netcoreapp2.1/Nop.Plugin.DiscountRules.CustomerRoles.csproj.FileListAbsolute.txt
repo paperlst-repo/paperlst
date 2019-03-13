@@ -1,0 +1,14 @@
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\plugin.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Views\Configure.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Views\_ViewImports.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\logo.jpg
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Nop.Plugin.DiscountRules.CustomerRoles.deps.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Nop.Plugin.DiscountRules.CustomerRoles.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\DiscountRules.CustomerRoles\Nop.Plugin.DiscountRules.CustomerRoles.pdb
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\netcoreapp2.1\Nop.Plugin.DiscountRules.CustomerRoles.csprojAssemblyReference.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\netcoreapp2.1\Nop.Plugin.DiscountRules.CustomerRoles.csproj.CoreCompileInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\netcoreapp2.1\Nop.Plugin.DiscountRules.CustomerRoles.AssemblyInfoInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\netcoreapp2.1\Nop.Plugin.DiscountRules.CustomerRoles.AssemblyInfo.cs
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\netcoreapp2.1\Nop.Plugin.DiscountRules.CustomerRoles.csproj.CopyComplete
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\netcoreapp2.1\Nop.Plugin.DiscountRules.CustomerRoles.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.DiscountRules.CustomerRoles\obj\Release\netcoreapp2.1\Nop.Plugin.DiscountRules.CustomerRoles.pdb

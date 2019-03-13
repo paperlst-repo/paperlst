@@ -1,0 +1,14 @@
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\plugin.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Views\Configure.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Views\PaymentInfo.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Views\_ViewImports.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\logo.jpg
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.deps.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.PayPalStandard\Nop.Plugin.Payments.PayPalStandard.pdb
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.PayPalStandard.csproj.CoreCompileInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.PayPalStandard.AssemblyInfoInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.PayPalStandard.AssemblyInfo.cs
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.PayPalStandard.csproj.CopyComplete
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.PayPalStandard.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.PayPalStandard\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.PayPalStandard.pdb

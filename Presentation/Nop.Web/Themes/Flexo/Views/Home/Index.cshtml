@@ -15,26 +15,20 @@
                 </div>*@
             @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBeforeProducts })
             <div class="featured-produt">
-                <div class="banner-top-center">
-                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-                    <!-- Automatico 1 -->
-                    <ins class="adsbygoogle"
-                         style="display:block"
-                         data-ad-client="ca-pub-5293600236951833"
-                         data-ad-slot="4343509234"
-                         data-ad-format="auto"
-                         data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({});
-                    </script>
-                </div>
 
                 <div class="product-grid home-page-product-grid">
+                    <partial name="~/Themes/Flexo/Views/Banners/_Automatico_1.cshtml" />
+                    <div class="title">
+                        <strong>Recommended</strong>
+                    </div>
+                    <div class="item-grid divAnchoPagina">
+                        @await Component.InvokeAsync("HomepageProducts", new { items = 10, page = 1, recommended = true })
+                    </div>
                     <div class="title">
                         <strong>@T("HomePage.Products")</strong>
                     </div>
-                    <div class="item-grid">
-                        @await Component.InvokeAsync("HomepageProducts", new { items = 20, page = 1 })
+                    <div class="lastProducts">
+                        @await Component.InvokeAsync("HomepageProducts", new { items = 20, page = 1, recommended = false })
                     </div>
                     <div id="loadingGif" style="width:100%; text-align: center; padding: 32px 0; display:none">
                         <img src="~/images/loading.gif" />
@@ -58,7 +52,7 @@
     var noMoreItems = false;
     var loading = false;
     $(window).scroll(function () {
-   
+
         if ($(window).scrollTop() + $(window).height() >= $(document).height() - 700 && !noMoreItems && !loading) {
             $("#loadingGif").show();
             loading = true;
@@ -66,9 +60,9 @@
                 if ($(data).length == 0)
                     noMoreItems = true;
                 $("#loadingGif").hide();
-                $(".product-grid .item-grid").append(data);
+                $(".lastProducts").append(data);
                 loading = false;
-            });        
+            });
             page = page + 1;
 
         }

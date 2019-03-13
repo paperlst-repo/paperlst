@@ -1,0 +1,16 @@
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\Content\styles.css
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\plugin.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\Views\Configure.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\Views\PaymentInfo.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\Views\_ViewImports.cshtml
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\logo.png
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\Nop.Plugin.Payments.Square.deps.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\Nop.Plugin.Payments.Square.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Presentation\Nop.Web\Plugins\Payments.Square\Nop.Plugin.Payments.Square.pdb
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Square\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Square.csprojAssemblyReference.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Square\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Square.csproj.CoreCompileInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Square\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Square.AssemblyInfoInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Square\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Square.AssemblyInfo.cs
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Square\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Square.csproj.CopyComplete
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Square\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Square.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Plugins\Nop.Plugin.Payments.Square\obj\Release\netcoreapp2.1\Nop.Plugin.Payments.Square.pdb

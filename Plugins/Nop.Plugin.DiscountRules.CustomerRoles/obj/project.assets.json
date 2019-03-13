@@ -14168,11 +14168,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\Nop.Plugin.DiscountRules.CustomerRoles.csproj",
+      "projectUniqueName": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\Nop.Plugin.DiscountRules.CustomerRoles.csproj",
       "projectName": "Nop.Plugin.DiscountRules.CustomerRoles",
-      "projectPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\Nop.Plugin.DiscountRules.CustomerRoles.csproj",
+      "projectPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\Nop.Plugin.DiscountRules.CustomerRoles.csproj",
       "packagesPath": "C:\\Users\\JSGG2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\obj\\",
+      "outputPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Plugins\\Nop.Plugin.DiscountRules.CustomerRoles\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -14191,8 +14191,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
-              "projectPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
+            "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj": {
+              "projectPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Presentation\\Nop.Web.Framework\\Nop.Web.Framework.csproj"
             }
           }
         }

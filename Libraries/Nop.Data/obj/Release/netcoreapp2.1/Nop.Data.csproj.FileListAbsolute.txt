@@ -10,3 +10,15 @@ C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\
 C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.csproj.CopyComplete
 C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.dll
 C:\Users\JSGG2\Desktop\ecommerce\nopCommerce_4.10_Source\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.pdb
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\bin\Release\netcoreapp2.1\Nop.Data.deps.json
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\bin\Release\netcoreapp2.1\Nop.Data.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\bin\Release\netcoreapp2.1\Nop.Data.pdb
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\bin\Release\netcoreapp2.1\Nop.Core.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\bin\Release\netcoreapp2.1\Nop.Core.pdb
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.csprojAssemblyReference.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.csproj.CoreCompileInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.AssemblyInfoInputs.cache
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.AssemblyInfo.cs
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.csproj.CopyComplete
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.dll
+C:\Users\JSGG2\Documents\GitHub\paperlst\Libraries\Nop.Data\obj\Release\netcoreapp2.1\Nop.Data.pdb

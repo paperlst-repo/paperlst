@@ -13069,11 +13069,11 @@
   "project": {
     "version": "4.1.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+      "projectUniqueName": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Libraries\\Nop.Data\\Nop.Data.csproj",
       "projectName": "Nop.Data",
-      "projectPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\Nop.Data.csproj",
+      "projectPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Libraries\\Nop.Data\\Nop.Data.csproj",
       "packagesPath": "C:\\Users\\JSGG2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Data\\obj\\",
+      "outputPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Libraries\\Nop.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -13092,8 +13092,8 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj": {
-              "projectPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Libraries\\Nop.Core\\Nop.Core.csproj"
+            "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Libraries\\Nop.Core\\Nop.Core.csproj": {
+              "projectPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Libraries\\Nop.Core\\Nop.Core.csproj"
             }
           }
         }

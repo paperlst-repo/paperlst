@@ -6,12 +6,17 @@
             <strong>@T("HomePage.Products")</strong>
         </div>
         <div class="item-grid">*@
-    @foreach (var item in Model.ToList())
-    {
-        <div class="item-box">
-            @await Html.PartialAsync("_ProductBox", item)
-        </div>
-    }
+    <div class="item-grid ">
+        @foreach (var item in Model.ToList())
+        {
+            <div class="item-box">
+                @await Html.PartialAsync("_ProductBox", item)
+            </div>
+
+        }
+    </div>
+    <partial name="~/Themes/Flexo/Views/Banners/_Automatico_1.cshtml" />
+
     @*</div>
         </div>*@
     @*<div class="showmore-wrapper "><a href="#" class="button-1">SHOW MORE</a></div>*@

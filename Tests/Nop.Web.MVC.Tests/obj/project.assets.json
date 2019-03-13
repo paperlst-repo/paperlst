@@ -15233,11 +15233,11 @@
   "project": {
     "version": "4.1.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Tests\\Nop.Web.MVC.Tests\\Nop.Web.MVC.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Tests\\Nop.Web.MVC.Tests\\Nop.Web.MVC.Tests.csproj",
       "projectName": "Nop.Web.MVC.Tests",
-      "projectPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Tests\\Nop.Web.MVC.Tests\\Nop.Web.MVC.Tests.csproj",
+      "projectPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Tests\\Nop.Web.MVC.Tests\\Nop.Web.MVC.Tests.csproj",
       "packagesPath": "C:\\Users\\JSGG2\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Tests\\Nop.Web.MVC.Tests\\obj\\",
+      "outputPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Tests\\Nop.Web.MVC.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -15256,11 +15256,11 @@
       "frameworks": {
         "netcoreapp2.1": {
           "projectReferences": {
-            "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Presentation\\Nop.Web\\Nop.Web.csproj": {
-              "projectPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Presentation\\Nop.Web\\Nop.Web.csproj"
+            "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Presentation\\Nop.Web\\Nop.Web.csproj": {
+              "projectPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Presentation\\Nop.Web\\Nop.Web.csproj"
             },
-            "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Tests\\Nop.Tests\\Nop.Tests.csproj": {
-              "projectPath": "C:\\Users\\JSGG2\\Desktop\\ecommerce\\nopCommerce_4.10_Source\\Tests\\Nop.Tests\\Nop.Tests.csproj"
+            "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Tests\\Nop.Tests\\Nop.Tests.csproj": {
+              "projectPath": "C:\\Users\\JSGG2\\Documents\\GitHub\\paperlst\\Tests\\Nop.Tests\\Nop.Tests.csproj"
             }
           }
         }
