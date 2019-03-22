@@ -77,6 +77,10 @@
     @*Favicon - upload favicon.ico file to the root directory*@
     @await Component.InvokeAsync("Favicon")
     <!--Designed by nopAdvance - http://www.nopadvance.com-->
+
+    <link href="~/lib/slick/slick.css" rel="stylesheet" />
+    <link href="~/lib/slick/slick-theme.css" rel="stylesheet" />
+
     @if (displayMiniProfiler)
     {
         <mini-profiler />
@@ -87,7 +91,7 @@
 </head>
 <body>
     @RenderBody()
- 
+
     @Html.NopCssFiles(this.Url, ResourceLocation.Footer)
     @Html.NopScripts(this.Url, ResourceLocation.Footer)
     @Html.NopInlineScripts(this.Url, ResourceLocation.Footer)
@@ -106,7 +110,9 @@
     </script>
 
 
-
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="~/lib/slick/slick.min.js"></script>
 </body>
 
 </html>

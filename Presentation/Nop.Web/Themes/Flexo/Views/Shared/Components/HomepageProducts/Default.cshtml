@@ -9,10 +9,9 @@
     <div class="item-grid ">
         @foreach (var item in Model.ToList())
         {
-            <div class="item-box">
+            <div class="item-box @(item.ReviewOverviewModel.AllowCustomerReviews ? "box-recommended" : "")">
                 @await Html.PartialAsync("_ProductBox", item)
             </div>
-
         }
     </div>
     <partial name="~/Themes/Flexo/Views/Banners/_Automatico_1.cshtml" />
